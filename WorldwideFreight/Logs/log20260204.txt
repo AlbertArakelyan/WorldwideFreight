@@ -1,0 +1,103 @@
+2026-02-04 21:35:45 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-04 21:35:45 [Information] Hosting environment: "Development"
+2026-02-04 21:35:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-04 21:35:45 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-04 21:35:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 411.2411ms
+2026-02-04 21:35:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-04 21:35:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 233.7283ms
+2026-02-04 21:35:51 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - null 0
+2026-02-04 21:35:51 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - 307 null null 6.6757ms
+2026-02-04 21:35:51 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - null 0
+2026-02-04 21:35:51 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:35:51 [Information] Route matched with "{action = \"SignUp\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(WorldwideFreight.Dtos.UserDtos.UserSignUpRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-04 21:35:51 [Information] Executing "ObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'.
+2026-02-04 21:35:51 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" in 317.0973ms
+2026-02-04 21:35:51 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:35:51 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - 415 null "application/problem+json; charset=utf-8" 374.6372ms
+2026-02-04 21:36:00 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - "application/json" 78
+2026-02-04 21:36:00 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - 307 null null 0.939ms
+2026-02-04 21:36:00 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - "application/json" 78
+2026-02-04 21:36:00 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:36:00 [Information] Route matched with "{action = \"SignUp\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(WorldwideFreight.Dtos.UserDtos.UserSignUpRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-04 21:36:00 [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+2026-02-04 21:36:00 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" in 50.3736ms
+2026-02-04 21:36:00 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:36:00 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - 400 null "application/problem+json; charset=utf-8" 52.4197ms
+2026-02-04 21:36:21 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - "application/json" 115
+2026-02-04 21:36:21 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - 307 null null 1.308ms
+2026-02-04 21:36:21 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - "application/json" 115
+2026-02-04 21:36:21 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:36:21 [Information] Route matched with "{action = \"SignUp\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(WorldwideFreight.Dtos.UserDtos.UserSignUpRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-04 21:36:21 [Information] Executing action method "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" - Validation state: Valid
+2026-02-04 21:36:21 [Information] Executed action method "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3.1274ms.
+2026-02-04 21:36:21 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-04 21:36:21 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" in 48.3241ms
+2026-02-04 21:36:21 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:36:21 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - 200 null "application/json; charset=utf-8" 49.3571ms
+2026-02-04 21:36:49 [Information] Application is shutting down...
+2026-02-04 21:37:00 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-04 21:37:00 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - "application/json" 115
+2026-02-04 21:37:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-04 21:37:00 [Information] Hosting environment: "Development"
+2026-02-04 21:37:00 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-04 21:37:00 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - "application/json" 115
+2026-02-04 21:37:00 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - 307 null null 196.0125ms
+2026-02-04 21:37:00 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:37:00 [Information] Route matched with "{action = \"SignUp\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(WorldwideFreight.Dtos.UserDtos.UserSignUpRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-04 21:37:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 426.272ms
+2026-02-04 21:37:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-04 21:37:01 [Information] Executing action method "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" - Validation state: Valid
+2026-02-04 21:37:01 [Information] Executed action method "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 6.1565ms.
+2026-02-04 21:37:01 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-04 21:37:01 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" in 633.9115ms
+2026-02-04 21:37:01 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:37:01 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - 200 null "application/json; charset=utf-8" 732.1934ms
+2026-02-04 21:37:01 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 329.6627ms
+2026-02-04 21:37:15 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - "application/json" 87
+2026-02-04 21:37:15 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - 307 null null 1.2103ms
+2026-02-04 21:37:15 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - "application/json" 87
+2026-02-04 21:37:15 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:37:15 [Information] Route matched with "{action = \"SignUp\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(WorldwideFreight.Dtos.UserDtos.UserSignUpRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-04 21:37:15 [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+2026-02-04 21:37:16 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" in 64.7068ms
+2026-02-04 21:37:16 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:37:16 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - 400 null "application/problem+json; charset=utf-8" 66.42ms
+2026-02-04 21:37:29 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - "application/json" 86
+2026-02-04 21:37:29 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - 307 null null 0.6884ms
+2026-02-04 21:37:29 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - "application/json" 86
+2026-02-04 21:37:29 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:37:29 [Information] Route matched with "{action = \"SignUp\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(WorldwideFreight.Dtos.UserDtos.UserSignUpRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-04 21:37:29 [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+2026-02-04 21:37:29 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" in 5.1716ms
+2026-02-04 21:37:29 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:37:29 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - 400 null "application/problem+json; charset=utf-8" 5.7822ms
+2026-02-04 21:37:58 [Information] Application is shutting down...
+2026-02-04 21:57:15 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-04 21:57:16 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-04 21:57:16 [Information] Hosting environment: "Development"
+2026-02-04 21:57:16 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-04 21:57:16 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 470.4357ms
+2026-02-04 21:57:16 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-04 21:57:17 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 381.1539ms
+2026-02-04 21:57:22 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - "application/json" 115
+2026-02-04 21:57:22 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signUp""" - 307 null null 12.4872ms
+2026-02-04 21:57:22 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - "application/json" 115
+2026-02-04 21:57:22 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:57:22 [Information] Route matched with "{action = \"SignUp\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.UserDtos.UserSignUpResponseDto]]] SignUp(WorldwideFreight.Dtos.UserDtos.UserSignUpRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-04 21:57:23 [Information] Executing action method "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" - Validation state: Valid
+2026-02-04 21:57:26 [Information] Executed DbCommand ("141"ms) [Parameters=["@__signUpRequest_Email_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AvatarUrl], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[Password], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__signUpRequest_Email_0"
+2026-02-04 21:57:27 [Information] Executed DbCommand ("18"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AvatarUrl], [CreatedAt], [Email], [FullName], [Password], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);"
+2026-02-04 21:57:27 [Information] Executed action method "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4878.3618ms.
+2026-02-04 21:57:28 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-04 21:57:28 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)" in 5380.0498ms
+2026-02-04 21:57:28 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignUp (WorldwideFreight)"'
+2026-02-04 21:57:28 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signUp""" - 200 null "application/json; charset=utf-8" 5530.6919ms
+2026-02-04 21:57:48 [Information] Application is shutting down...

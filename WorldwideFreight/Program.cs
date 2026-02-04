@@ -1,7 +1,21 @@
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using WorldwideFreight.Data;
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(
+        "Logs/log.txt",
+        rollingInterval: RollingInterval.Day,
+        retainedFileCountLimit: null,
+        fileSizeLimitBytes: 10_000_000,
+        rollOnFileSizeLimit: false,
+        shared: true,
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}"
+    )
+    .CreateLogger();
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
 
 // Add services to the container.
 
