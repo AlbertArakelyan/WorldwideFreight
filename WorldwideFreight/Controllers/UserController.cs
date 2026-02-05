@@ -171,7 +171,7 @@ namespace WorldwideFreight.Controllers
             
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var token = new System.IdentityModel.Tokens.Jwt.JwtSecurityToken(
+            var token = new JwtSecurityToken(
                 claims: claims,
                 expires: DateTime.Now.AddHours(2),
                 signingCredentials: creds
