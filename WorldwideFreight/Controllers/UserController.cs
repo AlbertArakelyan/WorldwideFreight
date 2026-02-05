@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using WorldwideFreight.Data;
 using WorldwideFreight.Dtos.ApiDtos;
 using WorldwideFreight.Dtos.UserDtos;
@@ -94,6 +97,89 @@ namespace WorldwideFreight.Controllers
                     Message = "An error occurred during sign-up.",
                 });
             }
+        }
+
+        [HttpPost("signIn")]
+        public async Task<IActionResult> SignIn([FromBody] UserSignInRequestDto signInRequest)
+        {
+            try
+            {
+                if (signInRequest == null || string.IsNullOrEmpty(signInRequest.Email) ||
+                    string.IsNullOrEmpty(signInRequest.Password))
+                {
+                    return BadRequest(new ApiResponseDto<object>
+                    {
+                        Success = false,
+                        Message = "Invalid sign-in request data."
+                    });
+                }
+                
+                var user = await _dbContext.Users
+                    .FirstOrDefaultAsync(u => u.Email == signInRequest.Email);
+                
+                var isPasswordCorrect = BCrypt.Net.BCrypt.Verify(signInRequest.Password, user.Password);
+                
+                if (user == null || !isPasswordCorrect)
+                {
+                    return Unauthorized(new ApiResponseDto<object>
+                    {
+                        Success = false,
+                        Message = "Invalid email or password."
+                    });
+                }
+
+                var userData = new UserDto
+                {
+                    FullName = user.FullName,
+                    Email = user.Email,
+                    AvatarUrl = user.AvatarUrl
+                };
+                var accessToken = GenerateJwtToken(user);
+                var sendData = new UserSignInResponseDto
+                {
+                    User = userData,
+                    AccessToken = accessToken
+                };
+                
+                return Ok(new ApiResponseDto<UserSignInResponseDto>
+                {
+                    Success = true,
+                    Message = "User signed in successfully.",
+                    Data = sendData 
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                _logger.LogError(ex, "UserController/signIn: An error occurred during sign-in.");
+                return StatusCode(500, new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "An error occurred during sign-in.",
+                });
+            }
+        }
+
+        private string? GenerateJwtToken(User user)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.FullName)
+            };
+            
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var token = new System.IdentityModel.Tokens.Jwt.JwtSecurityToken(
+                claims: claims,
+                expires: DateTime.Now.AddHours(2),
+                signingCredentials: creds
+            );
+
+            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return jwt;
         }
     }
 }
