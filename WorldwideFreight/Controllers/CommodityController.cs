@@ -201,4 +201,51 @@ public class CommodityController : BaseController
             });
         }
     }
+
+    [HttpDelete("{id}")]
+    [Authorize()]
+    public async Task<ActionResult<ApiResponseDto<DeleteCommodityResponse>>> DeleteCommodity(int id)
+    {
+        try
+        {
+            var commodity = await _dbContext.Commodities.FindAsync(id);
+            if (commodity == null)
+            {
+                return NotFound(new ApiResponseDto<DeleteCommodityResponse>
+                {
+                    Success = false,
+                    Message = "Commodity not found.",
+                    Data = new DeleteCommodityResponse
+                    {
+                        Id = id,
+                        IsDeleted = false
+                    }
+                });
+            }
+
+            _dbContext.Commodities.Remove(commodity);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(new ApiResponseDto<DeleteCommodityResponse>
+            {
+                Success = true,
+                Message = "Commodity deleted successfully.",
+                Data = new DeleteCommodityResponse
+                {
+                    Id = commodity.Id,
+                    IsDeleted = true
+                }
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            _logger.LogError(ex, "Error occurred while deleting commodity.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
+        }
+    }
 }
