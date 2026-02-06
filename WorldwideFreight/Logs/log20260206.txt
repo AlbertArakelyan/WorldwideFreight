@@ -280,3 +280,121 @@ WHERE [c].[Code] = @__code_0"
 2026-02-06 23:10:40 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
 2026-02-06 23:10:40 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - 200 null "application/json; charset=utf-8" 8.1698ms
 2026-02-06 23:11:14 [Information] Application is shutting down...
+2026-02-06 23:17:48 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 23:17:49 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 23:17:49 [Information] Hosting environment: "Development"
+2026-02-06 23:17:49 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 23:17:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 23:17:49 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 381.9031ms
+2026-02-06 23:17:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 23:17:50 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 336.2701ms
+2026-02-06 23:18:53 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:55011""""/apiCommodity/1""" - "application/json" 56
+2026-02-06 23:18:53 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:55011""""/apiCommodity/1""" - 307 null null 123.6077ms
+2026-02-06 23:18:53 [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:44358""""/apiCommodity/1""" - "application/json" 56
+2026-02-06 23:18:53 [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:44358""""/apiCommodity/1""" - 404 null null 5.1949ms
+2026-02-06 23:18:53 [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "PUT" "https"://"localhost:44358""""/apiCommodity/1", Response status code: 404
+2026-02-06 23:19:03 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - "application/json" 56
+2026-02-06 23:19:03 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - 307 null null 6.074ms
+2026-02-06 23:19:03 [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - "application/json" 56
+2026-02-06 23:19:03 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:19:03 [Information] Route matched with "{action = \"UpdateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityResponse]]] UpdateCommodity(Int32, WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityRequest)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:19:03 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:19:07 [Information] Executed DbCommand ("126"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-06 23:19:07 [Information] Executed DbCommand ("11"ms) [Parameters=["@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Commodities] SET [Name] = @p0, [UpdatedAt] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;"
+2026-02-06 23:19:07 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4280.5754ms.
+2026-02-06 23:19:07 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:19:07 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" in 4690.0879ms
+2026-02-06 23:19:07 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:19:07 [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - 200 null "application/json; charset=utf-8" 4793.2142ms
+2026-02-06 23:19:25 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - "application/json" 52
+2026-02-06 23:19:25 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - 307 null null 1.4277ms
+2026-02-06 23:19:25 [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - "application/json" 52
+2026-02-06 23:19:25 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:19:25 [Information] Route matched with "{action = \"UpdateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityResponse]]] UpdateCommodity(Int32, WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityRequest)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:19:25 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:19:25 [Information] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-06 23:19:25 [Information] Executed DbCommand ("5"ms) [Parameters=["@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Commodities] SET [Code] = @p0, [Name] = @p1, [UpdatedAt] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;"
+2026-02-06 23:19:25 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 57.5634ms.
+2026-02-06 23:19:25 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:19:25 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" in 62.2821ms
+2026-02-06 23:19:25 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:19:25 [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - 200 null "application/json; charset=utf-8" 67.5813ms
+2026-02-06 23:19:35 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - "application/json" 51
+2026-02-06 23:19:35 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - 307 null null 1.493ms
+2026-02-06 23:19:35 [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - "application/json" 51
+2026-02-06 23:19:35 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:19:35 [Information] Route matched with "{action = \"UpdateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityResponse]]] UpdateCommodity(Int32, WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityRequest)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:19:35 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:19:35 [Information] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-06 23:19:35 [Information] Executed DbCommand ("5"ms) [Parameters=["@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Commodities] SET [Code] = @p0, [UpdatedAt] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;"
+2026-02-06 23:19:35 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 115.7666ms.
+2026-02-06 23:19:35 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:19:35 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" in 119.4956ms
+2026-02-06 23:19:35 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:19:35 [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - 200 null "application/json; charset=utf-8" 123.8241ms
+2026-02-06 23:19:58 [Information] Application is shutting down...
+2026-02-06 23:20:35 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 23:20:35 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 23:20:35 [Information] Hosting environment: "Development"
+2026-02-06 23:20:35 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 23:20:35 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 23:20:35 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 23:20:36 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 443.326ms
+2026-02-06 23:20:36 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 440.4076ms
+2026-02-06 23:20:36 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 23:20:36 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 328.0158ms
+2026-02-06 23:20:43 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - "application/json" 51
+2026-02-06 23:20:43 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - 307 null null 131.2334ms
+2026-02-06 23:20:43 [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - "application/json" 51
+2026-02-06 23:20:43 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:20:43 [Information] Route matched with "{action = \"UpdateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityResponse]]] UpdateCommodity(Int32, WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityRequest)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:20:44 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:20:46 [Information] Executed DbCommand ("112"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-06 23:20:46 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2672.3853ms.
+2026-02-06 23:20:46 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityResponse, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:20:46 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" in 3045.9254ms
+2026-02-06 23:20:46 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:20:46 [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - 200 null "application/json; charset=utf-8" 3131.9292ms
+2026-02-06 23:20:48 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - "application/json" 51
+2026-02-06 23:20:48 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:55011""""/api/Commodity/1""" - 307 null null 2.118ms
+2026-02-06 23:20:48 [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - "application/json" 51
+2026-02-06 23:20:48 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:20:48 [Information] Route matched with "{action = \"UpdateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityResponse]]] UpdateCommodity(Int32, WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityRequest)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:20:48 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:20:48 [Information] Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-06 23:20:48 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 58.2797ms.
+2026-02-06 23:20:48 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Dtos.CommodityDtos.UpdateCommodityResponse, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:20:48 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)" in 63.2192ms
+2026-02-06 23:20:48 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.UpdateCommodity (WorldwideFreight)"'
+2026-02-06 23:20:48 [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Commodity/1""" - 200 null "application/json; charset=utf-8" 67.9689ms
+2026-02-06 23:20:56 [Information] Application is shutting down...

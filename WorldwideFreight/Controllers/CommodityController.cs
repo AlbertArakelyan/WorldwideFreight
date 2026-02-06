@@ -144,4 +144,61 @@ public class CommodityController : BaseController
             });
         }
     }
+    
+    [HttpPut("{id}")]
+    [Authorize()]
+    public async Task<ActionResult<ApiResponseDto<UpdateCommodityResponse>>> UpdateCommodity(int id, [FromBody] UpdateCommodityRequest updateRequest)
+    {
+        try
+        {
+            var commodity = await _dbContext.Commodities.FindAsync(id);
+            
+            if (commodity == null)
+            {
+                return NotFound(new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "Commodity not found."
+                });
+            }
+            
+            if (string.IsNullOrEmpty(updateRequest.Name) || string.IsNullOrEmpty(updateRequest.Code))
+            {
+                return BadRequest(new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "Invalid commodity data."
+                });
+            }
+
+            commodity.Name = updateRequest.Name;
+            commodity.Code = updateRequest.Code;
+
+            await _dbContext.SaveChangesAsync();
+            
+            var sendData = new UpdateCommodityResponse
+            {
+                Id = commodity.Id,
+                Name = commodity.Name,
+                Code = commodity.Code
+            };
+
+            return Ok(new ApiResponseDto<UpdateCommodityResponse>
+            {
+                Success = true,
+                Message = "Commodity updated successfully.",
+                Data = sendData
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            _logger.LogError(ex, "Error occurred while updating commodity.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
+        }
+    }
 }
