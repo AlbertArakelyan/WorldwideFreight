@@ -1,0 +1,48 @@
+2026-02-06 22:20:29 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 22:20:29 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 22:20:29 [Information] Hosting environment: "Development"
+2026-02-06 22:20:29 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 22:20:29 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger""" - null null
+2026-02-06 22:20:29 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 22:20:29 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger""" - 301 null null 129.3289ms
+2026-02-06 22:20:29 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 89.3857ms
+2026-02-06 22:20:29 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/swagger-ui.css""" - null null
+2026-02-06 22:20:29 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/swagger-ui-bundle.js""" - null null
+2026-02-06 22:20:29 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2026-02-06 22:20:29 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2026-02-06 22:20:29 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2026-02-06 22:20:29 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/swagger-ui.css""" - 200 152034 "text/css" 24.8544ms
+2026-02-06 22:20:29 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/swagger-ui-standalone-preset.js""" - 200 230280 "text/javascript" 20.5627ms
+2026-02-06 22:20:29 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2026-02-06 22:20:29 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/swagger-ui-bundle.js""" - 200 1456926 "text/javascript" 47.5724ms
+2026-02-06 22:20:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 22:20:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/favicon-32x32.png""" - null null
+2026-02-06 22:20:30 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2026-02-06 22:20:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 1.0925ms
+2026-02-06 22:20:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 172.0646ms
+2026-02-06 22:20:50 [Information] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-02-06 22:20:50 [Information] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2026-02-06 22:20:50 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-02-06 22:20:50 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2026-02-06 22:20:50 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2026-02-06 22:20:50 [Information] Applying migration '"20260206182001_CreateCommoditiesTable"'.
+2026-02-06 22:20:50 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Commodities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Code] nvarchar(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Commodities] PRIMARY KEY ([Id])
+);"
+2026-02-06 22:20:50 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260206182001_CreateCommoditiesTable', N'8.0.23');"
+2026-02-06 22:20:54 [Information] Application is shutting down...

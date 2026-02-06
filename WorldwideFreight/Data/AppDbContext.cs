@@ -10,6 +10,7 @@ namespace WorldwideFreight.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Commodity> Commodities { get; set; }
 
         public override int SaveChanges()
         {
