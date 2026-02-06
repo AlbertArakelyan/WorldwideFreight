@@ -74,7 +74,38 @@ public class CommodityController : BaseController
         {
             Console.WriteLine(ex);
             _logger.LogError(ex, "Error occurred while creating commodity.");
-            return StatusCode(500, "An error occurred while processing your request.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
+        }
+    }
+
+    [HttpGet]
+    [Authorize()]
+    public async Task<ActionResult<ApiResponseDto<List<Commodity>>>> GetCommodities()
+    {
+        try
+        {
+            var commodities = await _dbContext.Commodities.ToListAsync();
+
+            return Ok(new ApiResponseDto<List<Commodity>>
+            {
+                Success = true,
+                Message = "Commodities retrieved successfully.",
+                Data = commodities
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            _logger.LogError(ex, "Error occurred while retrieving commodities.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
         }
     }
 }
