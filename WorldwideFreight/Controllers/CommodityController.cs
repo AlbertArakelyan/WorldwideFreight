@@ -108,4 +108,40 @@ public class CommodityController : BaseController
             });
         }
     }
+    
+    [HttpGet("{code}")]
+    [Authorize()]
+    public async Task<ActionResult<ApiResponseDto<Commodity>>> GetCommodityByCode(string code)
+    {
+        try
+        {
+            var commodity = await _dbContext.Commodities.FirstOrDefaultAsync(c => c.Code == code);
+
+            if (commodity == null)
+            {
+                return NotFound(new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "Commodity not found."
+                });
+            }
+
+            return Ok(new ApiResponseDto<Commodity>
+            {
+                Success = true,
+                Message = "Commodity retrieved successfully.",
+                Data = commodity
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            _logger.LogError(ex, "Error occurred while retrieving commodity by code.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
+        }
+    }
 }

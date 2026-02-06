@@ -153,3 +153,130 @@ WHERE [c].[Code] = @__commodityRequest_Code_0 OR [c].[Name] = @__commodityReques
 2026-02-06 22:46:00 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)"'
 2026-02-06 22:46:00 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - 409 null "application/json; charset=utf-8" 3191.3057ms
 2026-02-06 22:46:08 [Information] Application is shutting down...
+2026-02-06 22:57:59 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 22:58:00 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 22:58:00 [Information] Hosting environment: "Development"
+2026-02-06 22:58:00 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 22:58:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 22:58:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 398.8205ms
+2026-02-06 22:58:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 22:58:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 272.8306ms
+2026-02-06 22:58:21 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:58:21 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 13.8837ms
+2026-02-06 22:58:21 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:58:21 [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user."
+2026-02-06 22:58:21 [Information] AuthenticationScheme: "Bearer" was challenged.
+2026-02-06 22:58:21 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - 401 null null 18.6478ms
+2026-02-06 22:58:25 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:58:25 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 1.3117ms
+2026-02-06 22:58:25 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:58:25 [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user."
+2026-02-06 22:58:25 [Information] AuthenticationScheme: "Bearer" was challenged.
+2026-02-06 22:58:25 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - 401 null null 5.4496ms
+2026-02-06 22:58:44 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity""" - null null
+2026-02-06 22:58:45 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 124.9721ms
+2026-02-06 22:58:45 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity""" - null null
+2026-02-06 22:58:45 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)"'
+2026-02-06 22:58:45 [Information] Route matched with "{action = \"GetCommodities\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[System.Collections.Generic.List`1[WorldwideFreight.Models.Commodity]]]] GetCommodities()" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 22:58:45 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)" - Validation state: Valid
+2026-02-06 22:58:48 [Information] Executed DbCommand ("106"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]"
+2026-02-06 22:58:49 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3710.0803ms.
+2026-02-06 22:58:49 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-06 22:58:49 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)" in 4062.6513ms
+2026-02-06 22:58:49 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)"'
+2026-02-06 22:58:49 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity""" - 200 null "application/json; charset=utf-8" 4136.229ms
+2026-02-06 22:58:54 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity""" - null null
+2026-02-06 22:58:54 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 0.8878ms
+2026-02-06 22:58:54 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity""" - null null
+2026-02-06 22:58:54 [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user."
+2026-02-06 22:58:54 [Information] AuthenticationScheme: "Bearer" was challenged.
+2026-02-06 22:58:54 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity""" - 401 null null 0.8283ms
+2026-02-06 22:59:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity""" - null null
+2026-02-06 22:59:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 1.5272ms
+2026-02-06 22:59:00 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity""" - null null
+2026-02-06 22:59:00 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)"'
+2026-02-06 22:59:00 [Information] Route matched with "{action = \"GetCommodities\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[System.Collections.Generic.List`1[WorldwideFreight.Models.Commodity]]]] GetCommodities()" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 22:59:00 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)" - Validation state: Valid
+2026-02-06 22:59:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]"
+2026-02-06 22:59:00 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 50.5232ms.
+2026-02-06 22:59:00 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-06 22:59:00 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)" in 55.2803ms
+2026-02-06 22:59:00 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodities (WorldwideFreight)"'
+2026-02-06 22:59:00 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity""" - 200 null "application/json; charset=utf-8" 57.241ms
+2026-02-06 23:00:37 [Information] Application is shutting down...
+2026-02-06 23:10:26 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 23:10:26 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 23:10:26 [Information] Hosting environment: "Development"
+2026-02-06 23:10:26 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 23:10:26 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:26 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 23:10:27 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - 307 null null 362.756ms
+2026-02-06 23:10:27 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:27 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 414.0428ms
+2026-02-06 23:10:27 [Information] Route matched with "{action = \"GetCommodityByCode\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Models.Commodity]]] GetCommodityByCode(System.String)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:10:27 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 23:10:27 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:10:27 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 299.307ms
+2026-02-06 23:10:31 [Information] Executed DbCommand ("57"ms) [Parameters=["@__code_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Code] = @__code_0"
+2026-02-06 23:10:31 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4004.8365ms.
+2026-02-06 23:10:31 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:10:31 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" in 4465.9382ms
+2026-02-06 23:10:31 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:31 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - 200 null "application/json; charset=utf-8" 4576.4911ms
+2026-02-06 23:10:36 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:36 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - 307 null null 2.2482ms
+2026-02-06 23:10:36 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:36 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:36 [Information] Route matched with "{action = \"GetCommodityByCode\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Models.Commodity]]] GetCommodityByCode(System.String)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:10:36 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:10:37 [Information] Executed DbCommand ("6"ms) [Parameters=["@__code_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Code] = @__code_0"
+2026-02-06 23:10:37 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 59.3664ms.
+2026-02-06 23:10:37 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:10:37 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" in 63.9894ms
+2026-02-06 23:10:37 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:37 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - 200 null "application/json; charset=utf-8" 75.6364ms
+2026-02-06 23:10:39 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:39 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - 307 null null 1.464ms
+2026-02-06 23:10:39 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:39 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:39 [Information] Route matched with "{action = \"GetCommodityByCode\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Models.Commodity]]] GetCommodityByCode(System.String)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:10:39 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:10:39 [Information] Executed DbCommand ("1"ms) [Parameters=["@__code_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Code] = @__code_0"
+2026-02-06 23:10:39 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 147.7281ms.
+2026-02-06 23:10:39 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:10:39 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" in 153.6291ms
+2026-02-06 23:10:39 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:39 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - 200 null "application/json; charset=utf-8" 157.3912ms
+2026-02-06 23:10:40 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:40 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Commodity/GC""" - 307 null null 1.4907ms
+2026-02-06 23:10:40 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - null null
+2026-02-06 23:10:40 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:40 [Information] Route matched with "{action = \"GetCommodityByCode\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Models.Commodity]]] GetCommodityByCode(System.String)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 23:10:40 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" - Validation state: Valid
+2026-02-06 23:10:40 [Information] Executed DbCommand ("1"ms) [Parameters=["@__code_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Code] = @__code_0"
+2026-02-06 23:10:40 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3.9039ms.
+2026-02-06 23:10:40 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Models.Commodity, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 23:10:40 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)" in 6.6951ms
+2026-02-06 23:10:40 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.GetCommodityByCode (WorldwideFreight)"'
+2026-02-06 23:10:40 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Commodity/GC""" - 200 null "application/json; charset=utf-8" 8.1698ms
+2026-02-06 23:11:14 [Information] Application is shutting down...
