@@ -46,3 +46,110 @@ ORDER BY [MigrationId];"
 ""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
 VALUES (N'20260206182001_CreateCommoditiesTable', N'8.0.23');"
 2026-02-06 22:20:54 [Information] Application is shutting down...
+2026-02-06 22:30:48 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 22:30:48 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 22:30:48 [Information] Hosting environment: "Development"
+2026-02-06 22:30:48 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 22:30:48 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 22:30:49 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 920.1282ms
+2026-02-06 22:30:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 22:30:50 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 334.2564ms
+2026-02-06 22:32:15 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signIn""" - "application/json" 75
+2026-02-06 22:32:15 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/User/signIn""" - 307 null null 11.4712ms
+2026-02-06 22:32:15 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signIn""" - "application/json" 75
+2026-02-06 22:32:15 [Information] Executing endpoint '"WorldwideFreight.Controllers.UserController.SignIn (WorldwideFreight)"'
+2026-02-06 22:32:16 [Information] Route matched with "{action = \"SignIn\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignIn(WorldwideFreight.Dtos.UserDtos.UserSignInRequestDto)" on controller "WorldwideFreight.Controllers.UserController" ("WorldwideFreight").
+2026-02-06 22:32:16 [Information] Executing action method "WorldwideFreight.Controllers.UserController.SignIn (WorldwideFreight)" - Validation state: Valid
+2026-02-06 22:32:20 [Information] Executed DbCommand ("135"ms) [Parameters=["@__signInRequest_Email_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AvatarUrl], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[Password], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__signInRequest_Email_0"
+2026-02-06 22:32:21 [Information] Executed action method "WorldwideFreight.Controllers.UserController.SignIn (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4852.892ms.
+2026-02-06 22:32:21 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Dtos.UserDtos.UserSignInResponseDto, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 22:32:21 [Information] Executed action "WorldwideFreight.Controllers.UserController.SignIn (WorldwideFreight)" in 5261.1763ms
+2026-02-06 22:32:21 [Information] Executed endpoint '"WorldwideFreight.Controllers.UserController.SignIn (WorldwideFreight)"'
+2026-02-06 22:32:21 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/User/signIn""" - 200 null "application/json; charset=utf-8" 5359.8939ms
+2026-02-06 22:34:11 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:34:11 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 119.6155ms
+2026-02-06 22:34:11 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:34:11 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)"'
+2026-02-06 22:34:11 [Information] Route matched with "{action = \"CreateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCommodity()" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 22:34:11 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 22:34:11 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1.3534ms.
+2026-02-06 22:34:11 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-06 22:34:11 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)" in 11.756ms
+2026-02-06 22:34:11 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)"'
+2026-02-06 22:34:11 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - 200 null "application/json; charset=utf-8" 27.8397ms
+2026-02-06 22:34:15 [Information] Application is shutting down...
+2026-02-06 22:37:51 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 22:37:51 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 22:37:51 [Information] Hosting environment: "Development"
+2026-02-06 22:37:51 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 22:37:51 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 22:37:52 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 471.5402ms
+2026-02-06 22:37:52 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 22:37:52 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 305.0742ms
+2026-02-06 22:38:18 [Information] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-02-06 22:38:18 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2026-02-06 22:38:18 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-02-06 22:38:18 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2026-02-06 22:38:18 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2026-02-06 22:38:18 [Information] No migrations were applied. The database is already up to date.
+2026-02-06 22:38:31 [Information] Application is shutting down...
+2026-02-06 22:42:30 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 22:42:30 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 22:42:30 [Information] Hosting environment: "Development"
+2026-02-06 22:42:30 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 22:42:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 22:42:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 436.1681ms
+2026-02-06 22:42:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 22:42:31 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 269.0361ms
+2026-02-06 22:42:32 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:42:32 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 157.144ms
+2026-02-06 22:42:32 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:42:32 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)"'
+2026-02-06 22:42:32 [Information] Route matched with "{action = \"CreateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.CommodityDtos.CreateCommodityResponse]]] CreateCommodity(WorldwideFreight.Dtos.CommodityDtos.CreateCommodityRequest)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 22:42:33 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 22:42:35 [Information] Executed DbCommand ("121"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Commodities] ([Code], [CreatedAt], [Name], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);"
+2026-02-06 22:42:35 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2533.1247ms.
+2026-02-06 22:42:35 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Dtos.CommodityDtos.CreateCommodityResponse, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-06 22:42:35 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)" in 2964.4572ms
+2026-02-06 22:42:35 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)"'
+2026-02-06 22:42:35 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - 200 null "application/json; charset=utf-8" 3075.9511ms
+2026-02-06 22:43:12 [Information] Application is shutting down...
+2026-02-06 22:45:50 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-06 22:45:50 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-06 22:45:50 [Information] Hosting environment: "Development"
+2026-02-06 22:45:50 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-06 22:45:50 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-06 22:45:50 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 388.9764ms
+2026-02-06 22:45:51 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-06 22:45:51 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 277.6769ms
+2026-02-06 22:45:57 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:45:57 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Commodity""" - 307 null null 151.9406ms
+2026-02-06 22:45:57 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - "application/json" 51
+2026-02-06 22:45:57 [Information] Executing endpoint '"WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)"'
+2026-02-06 22:45:57 [Information] Route matched with "{action = \"CreateCommodity\", controller = \"Commodity\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.CommodityDtos.CreateCommodityResponse]]] CreateCommodity(WorldwideFreight.Dtos.CommodityDtos.CreateCommodityRequest)" on controller "WorldwideFreight.Controllers.CommodityController" ("WorldwideFreight").
+2026-02-06 22:45:57 [Information] Executing action method "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)" - Validation state: Valid
+2026-02-06 22:46:00 [Information] Executed DbCommand ("118"ms) [Parameters=["@__commodityRequest_Code_0='?' (Size = 4000), @__commodityRequest_Name_1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Code] = @__commodityRequest_Code_0 OR [c].[Name] = @__commodityRequest_Name_1"
+2026-02-06 22:46:00 [Information] Executed action method "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.ConflictObjectResult" in 2701.7498ms.
+2026-02-06 22:46:00 [Information] Executing "ConflictObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-06 22:46:00 [Information] Executed action "WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)" in 3091.3343ms
+2026-02-06 22:46:00 [Information] Executed endpoint '"WorldwideFreight.Controllers.CommodityController.CreateCommodity (WorldwideFreight)"'
+2026-02-06 22:46:00 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Commodity""" - 409 null "application/json; charset=utf-8" 3191.3057ms
+2026-02-06 22:46:08 [Information] Application is shutting down...
