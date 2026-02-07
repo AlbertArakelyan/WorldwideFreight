@@ -238,4 +238,51 @@ public class CarrierController : BaseController
             });
         }
     }
+
+    [HttpDelete("{id}")]
+    [Authorize()]
+    public async Task<ActionResult<ApiResponseDto<object>>> DeleteCarrier(int id)
+    {
+        try
+        {
+            var carrier = await _dbContext.Carriers.FindAsync(id);
+            if (carrier == null)
+            {
+                return NotFound(new ApiResponseDto<DeleteResponseDto>
+                {
+                    Success = false,
+                    Message = "Carrier not found.",
+                    Data =
+                    {
+                        Id = id,
+                        IsDeleted = false
+                    }
+                });
+            }
+            
+            _dbContext.Carriers.Remove(carrier);
+            await _dbContext.SaveChangesAsync();
+            
+            return Ok(new ApiResponseDto<object>
+            {
+                Success = true,
+                Message = "Carrier deleted successfully.",
+                Data = new DeleteResponseDto
+                {
+                    Id = carrier.Id,
+                    IsDeleted = true
+                }
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            _logger.LogError(ex, "Error deleting carrier.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
+        }
+    }
 }

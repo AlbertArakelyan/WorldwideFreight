@@ -479,3 +479,68 @@ WHERE [Id] = @p4;"
 2026-02-07 19:09:43 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.UpdateCarrier (WorldwideFreight)"'
 2026-02-07 19:09:43 [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:44358""""/api/Carrier/1""" - 200 null "application/json; charset=utf-8" 1340.7679ms
 2026-02-07 19:09:49 [Information] Application is shutting down...
+2026-02-07 19:37:55 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 19:37:55 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 19:37:55 [Information] Hosting environment: "Development"
+2026-02-07 19:37:55 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 19:37:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 19:37:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 156.6107ms
+2026-02-07 19:37:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 19:37:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 129.1258ms
+2026-02-07 19:38:08 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - "application/json" 148
+2026-02-07 19:38:08 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 94.2027ms
+2026-02-07 19:38:08 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - "application/json" 148
+2026-02-07 19:38:08 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 19:38:08 [Information] Route matched with "{action = \"CreateCarrier\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.Carrier.CreateCarrierResponseDto]]] CreateCarrier(WorldwideFreight.Dtos.Carrier.CreateCarrierRequestDto)" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 19:38:08 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" - Validation state: Valid
+2026-02-07 19:38:10 [Information] Executed DbCommand ("45"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Carriers] ([CommodityId], [CreatedAt], [LogoUrl], [Name], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);"
+2026-02-07 19:38:10 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1878.4066ms.
+2026-02-07 19:38:10 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Dtos.Carrier.CreateCarrierResponseDto, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-07 19:38:10 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" in 2073.1362ms
+2026-02-07 19:38:10 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 19:38:10 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 2137.9333ms
+2026-02-07 19:39:25 [Information] Request starting "HTTP/1.1" "DELETE" "http"://"localhost:55011""""/api/Carrier/2""" - null null
+2026-02-07 19:39:25 [Information] Request finished "HTTP/1.1" "DELETE" "http"://"localhost:55011""""/api/Carrier/2""" - 307 null null 1.7214ms
+2026-02-07 19:39:25 [Information] Request starting "HTTP/1.1" "DELETE" "https"://"localhost:44358""""/api/Carrier/2""" - null null
+2026-02-07 19:39:25 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)"'
+2026-02-07 19:39:25 [Information] Route matched with "{action = \"DeleteCarrier\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[System.Object]]] DeleteCarrier(Int32)" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 19:39:25 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)" - Validation state: Valid
+2026-02-07 19:39:26 [Information] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[CommodityId], [c].[CreatedAt], [c].[LogoUrl], [c].[Name], [c].[UpdatedAt]
+FROM [Carriers] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-07 19:39:26 [Information] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Carriers]
+OUTPUT 1
+WHERE [Id] = @p0;"
+2026-02-07 19:39:26 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 469.1607ms.
+2026-02-07 19:39:26 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 19:39:26 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)" in 479.3965ms
+2026-02-07 19:39:26 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)"'
+2026-02-07 19:39:26 [Information] Request finished "HTTP/1.1" "DELETE" "https"://"localhost:44358""""/api/Carrier/2""" - 200 null "application/json; charset=utf-8" 490.2051ms
+2026-02-07 19:39:34 [Information] Request starting "HTTP/1.1" "DELETE" "http"://"localhost:55011""""/api/Carrier/2""" - null null
+2026-02-07 19:39:34 [Information] Request finished "HTTP/1.1" "DELETE" "http"://"localhost:55011""""/api/Carrier/2""" - 307 null null 0.8498ms
+2026-02-07 19:39:34 [Information] Request starting "HTTP/1.1" "DELETE" "https"://"localhost:44358""""/api/Carrier/2""" - null null
+2026-02-07 19:39:34 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)"'
+2026-02-07 19:39:34 [Information] Route matched with "{action = \"DeleteCarrier\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[System.Object]]] DeleteCarrier(Int32)" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 19:39:34 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)" - Validation state: Valid
+2026-02-07 19:39:34 [Information] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[CommodityId], [c].[CreatedAt], [c].[LogoUrl], [c].[Name], [c].[UpdatedAt]
+FROM [Carriers] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-07 19:39:34 [Error] Error deleting carrier.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at WorldwideFreight.Controllers.CarrierController.DeleteCarrier(Int32 id) in C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight\Controllers\CarrierController.cs:line 251
+2026-02-07 19:39:34 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 82.5123ms.
+2026-02-07 19:39:34 [Information] Executing "ObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 19:39:34 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)" in 88.2818ms
+2026-02-07 19:39:34 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.DeleteCarrier (WorldwideFreight)"'
+2026-02-07 19:39:34 [Information] Request finished "HTTP/1.1" "DELETE" "https"://"localhost:44358""""/api/Carrier/2""" - 500 null "application/json; charset=utf-8" 94.695ms
+2026-02-07 19:39:46 [Information] Application is shutting down...

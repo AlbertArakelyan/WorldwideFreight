@@ -204,18 +204,18 @@ public class CommodityController : BaseController
 
     [HttpDelete("{id}")]
     [Authorize()]
-    public async Task<ActionResult<ApiResponseDto<DeleteCommodityResponse>>> DeleteCommodity(int id)
+    public async Task<ActionResult<ApiResponseDto<DeleteResponseDto>>> DeleteCommodity(int id)
     {
         try
         {
             var commodity = await _dbContext.Commodities.FindAsync(id);
             if (commodity == null)
             {
-                return NotFound(new ApiResponseDto<DeleteCommodityResponse>
+                return NotFound(new ApiResponseDto<DeleteResponseDto>
                 {
                     Success = false,
                     Message = "Commodity not found.",
-                    Data = new DeleteCommodityResponse
+                    Data = new DeleteResponseDto
                     {
                         Id = id,
                         IsDeleted = false
@@ -226,11 +226,11 @@ public class CommodityController : BaseController
             _dbContext.Commodities.Remove(commodity);
             await _dbContext.SaveChangesAsync();
 
-            return Ok(new ApiResponseDto<DeleteCommodityResponse>
+            return Ok(new ApiResponseDto<DeleteResponseDto>
             {
                 Success = true,
                 Message = "Commodity deleted successfully.",
-                Data = new DeleteCommodityResponse
+                Data = new DeleteResponseDto
                 {
                     Id = commodity.Id,
                     IsDeleted = true
