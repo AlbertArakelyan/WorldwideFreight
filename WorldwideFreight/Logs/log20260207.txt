@@ -36,3 +36,76 @@ ORDER BY [MigrationId];"
 ""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
 VALUES (N'20260207091048_CreateCarriersTable', N'8.0.23');"
 2026-02-07 13:11:22 [Information] Application is shutting down...
+2026-02-07 14:06:17 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:06:17 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:06:17 [Information] Hosting environment: "Development"
+2026-02-07 14:06:17 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:06:17 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:06:17 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 172.4271ms
+2026-02-07 14:06:17 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:06:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 173.7198ms
+2026-02-07 14:07:21 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - null 0
+2026-02-07 14:07:22 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 90.4124ms
+2026-02-07 14:07:22 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - null 0
+2026-02-07 14:07:22 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 14:07:22 [Information] Route matched with "{action = \"CreateCarrier\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateCarrier()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:07:22 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:07:22 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 0.6859ms.
+2026-02-07 14:07:22 [Information] Executing StatusCodeResult, setting HTTP status code 200
+2026-02-07 14:07:22 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" in 130.7775ms
+2026-02-07 14:07:22 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 14:07:22 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - 200 null null 167.4693ms
+2026-02-07 14:07:30 [Information] Application is shutting down...
+2026-02-07 14:07:38 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:07:38 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:07:38 [Information] Hosting environment: "Development"
+2026-02-07 14:07:38 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:07:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:07:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 176ms
+2026-02-07 14:07:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:07:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 153.6658ms
+2026-02-07 14:07:44 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - null 0
+2026-02-07 14:07:45 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 107.3598ms
+2026-02-07 14:07:45 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - null 0
+2026-02-07 14:07:45 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 14:07:45 [Information] Route matched with "{action = \"CreateCarrier\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateCarrier()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:07:45 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:07:45 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 0.852ms.
+2026-02-07 14:07:45 [Information] Executing "OkObjectResult", writing value of type '"System.Int32"'.
+2026-02-07 14:07:45 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" in 136.9642ms
+2026-02-07 14:07:45 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 14:07:45 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 171.731ms
+2026-02-07 14:07:48 [Information] Application is shutting down...
+2026-02-07 14:16:25 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:16:25 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:16:25 [Information] Hosting environment: "Development"
+2026-02-07 14:16:25 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:16:25 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:16:25 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 96.4079ms
+2026-02-07 14:16:25 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:16:25 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 105.7363ms
+2026-02-07 14:18:14 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - "application/json" 146
+2026-02-07 14:18:14 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 88.5049ms
+2026-02-07 14:18:14 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - "application/json" 146
+2026-02-07 14:18:14 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 14:18:14 [Information] Route matched with "{action = \"CreateCarrier\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[WorldwideFreight.Dtos.Carrier.CreateCarrierResponseDto]]] CreateCarrier(WorldwideFreight.Dtos.Carrier.CreateCarrierRequestDto)" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:18:14 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:18:15 [Information] Executed DbCommand ("40"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Carriers] ([CommodityId], [CreatedAt], [LogoUrl], [Name], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);"
+2026-02-07 14:18:15 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1059.5074ms.
+2026-02-07 14:18:15 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[WorldwideFreight.Dtos.Carrier.CreateCarrierResponseDto, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-02-07 14:18:15 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)" in 1230.7291ms
+2026-02-07 14:18:15 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.CreateCarrier (WorldwideFreight)"'
+2026-02-07 14:18:15 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1283.6903ms
+2026-02-07 14:18:23 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - "application/json" 146
+2026-02-07 14:18:23 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 1.4885ms
+2026-02-07 14:18:23 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - "application/json" 146
+2026-02-07 14:18:23 [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user."
+2026-02-07 14:18:23 [Information] AuthenticationScheme: "Bearer" was challenged.
+2026-02-07 14:18:23 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - 401 null null 8.6422ms
+2026-02-07 14:18:36 [Information] Application is shutting down...
