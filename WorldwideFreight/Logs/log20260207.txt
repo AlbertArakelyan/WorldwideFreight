@@ -1,0 +1,38 @@
+2026-02-07 13:11:05 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 13:11:06 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 13:11:06 [Information] Hosting environment: "Development"
+2026-02-07 13:11:06 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 13:11:06 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 13:11:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 234.4722ms
+2026-02-07 13:11:06 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 13:11:07 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 138.0085ms
+2026-02-07 13:11:20 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-02-07 13:11:20 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2026-02-07 13:11:20 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-02-07 13:11:20 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2026-02-07 13:11:20 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2026-02-07 13:11:20 [Information] Applying migration '"20260207091048_CreateCarriersTable"'.
+2026-02-07 13:11:20 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Carriers] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [LogoUrl] nvarchar(max) NOT NULL,
+    [CommodityId] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Carriers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carriers_Commodities_CommodityId] FOREIGN KEY ([CommodityId]) REFERENCES [Commodities] ([Id]) ON DELETE CASCADE
+);"
+2026-02-07 13:11:20 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_Carriers_CommodityId] ON [Carriers] ([CommodityId]);"
+2026-02-07 13:11:20 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260207091048_CreateCarriersTable', N'8.0.23');"
+2026-02-07 13:11:22 [Information] Application is shutting down...
