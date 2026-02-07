@@ -109,3 +109,272 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user."
 2026-02-07 14:18:23 [Information] AuthenticationScheme: "Bearer" was challenged.
 2026-02-07 14:18:23 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier""" - 401 null null 8.6422ms
 2026-02-07 14:18:36 [Information] Application is shutting down...
+2026-02-07 14:34:44 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:34:45 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:34:45 [Information] Hosting environment: "Development"
+2026-02-07 14:34:45 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:34:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:34:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 187.6472ms
+2026-02-07 14:34:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:34:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 142.4815ms
+2026-02-07 14:34:51 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:34:51 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 82.0673ms
+2026-02-07 14:34:51 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:34:51 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:34:51 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:34:51 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:34:53 [Information] Executed DbCommand ("53"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CommodityId], [c].[CreatedAt], [c].[LogoUrl], [c].[Name], [c].[UpdatedAt]
+FROM [Carriers] AS [c]"
+2026-02-07 14:34:53 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1808.2727ms.
+2026-02-07 14:34:53 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Carrier, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:34:53 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1959.497ms
+2026-02-07 14:34:53 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:34:53 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 2008.4455ms
+2026-02-07 14:35:34 [Information] Application is shutting down...
+2026-02-07 14:35:42 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:35:42 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:35:42 [Information] Hosting environment: "Development"
+2026-02-07 14:35:42 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:35:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:35:42 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 153.0853ms
+2026-02-07 14:35:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:35:42 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 146.3913ms
+2026-02-07 14:35:49 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:35:49 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 53.1324ms
+2026-02-07 14:35:49 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:35:49 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:35:49 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:35:49 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:35:50 [Information] Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CommodityId], [c].[CreatedAt], [c].[LogoUrl], [c].[Name], [c].[UpdatedAt], [c0].[Id], [c0].[Code], [c0].[CreatedAt], [c0].[Name], [c0].[UpdatedAt]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:35:50 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1178.6135ms.
+2026-02-07 14:35:50 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Carrier, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:35:50 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1348.2611ms
+2026-02-07 14:35:50 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:35:50 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1383.5762ms
+2026-02-07 14:35:54 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:35:54 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 0.7623ms
+2026-02-07 14:35:54 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:35:54 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:35:54 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:35:54 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:35:54 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CommodityId], [c].[CreatedAt], [c].[LogoUrl], [c].[Name], [c].[UpdatedAt], [c0].[Id], [c0].[Code], [c0].[CreatedAt], [c0].[Name], [c0].[UpdatedAt]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:35:54 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 31.9868ms.
+2026-02-07 14:35:54 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Carrier, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:35:54 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 33.7256ms
+2026-02-07 14:35:54 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:35:54 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 38.1957ms
+2026-02-07 14:35:59 [Information] Application is shutting down...
+2026-02-07 14:36:26 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:36:26 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:36:26 [Information] Hosting environment: "Development"
+2026-02-07 14:36:26 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:36:26 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:36:26 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 157.5276ms
+2026-02-07 14:36:26 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:36:26 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 152.801ms
+2026-02-07 14:36:29 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:36:29 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 89.177ms
+2026-02-07 14:36:29 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:36:29 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:36:29 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:36:29 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:36:30 [Error] Error retrieving carriers.
+System.InvalidOperationException: The expression 'new Commodity() {Id = c.CommodityId, Name = c.Commodity.Name, Code = c.Commodity.Code}' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see https://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|36_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at WorldwideFreight.Controllers.CarrierController.GetCarriers() in C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight\Controllers\CarrierController.cs:line 85
+2026-02-07 14:36:30 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 770.3676ms.
+2026-02-07 14:36:30 [Information] Executing "ObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:36:30 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 924.472ms
+2026-02-07 14:36:30 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:36:30 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 500 null "application/json; charset=utf-8" 958.9555ms
+2026-02-07 14:36:40 [Information] Application is shutting down...
+2026-02-07 14:38:12 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:38:12 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:38:12 [Information] Hosting environment: "Development"
+2026-02-07 14:38:12 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:38:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:38:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 121.6813ms
+2026-02-07 14:38:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:38:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 142.5369ms
+2026-02-07 14:38:16 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:38:16 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 57.9795ms
+2026-02-07 14:38:16 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:38:16 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:38:17 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:38:17 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:38:18 [Information] Executed DbCommand ("54"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Name], [c].[LogoUrl], [c].[CommodityId], [c0].[Id], [c0].[Name], [c0].[Code]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:38:18 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1445.9691ms.
+2026-02-07 14:38:18 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Carrier, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:38:18 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1593.3837ms
+2026-02-07 14:38:18 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:38:18 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1631.0361ms
+2026-02-07 14:38:43 [Information] Application is shutting down...
+2026-02-07 14:39:41 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:39:41 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:39:41 [Information] Hosting environment: "Development"
+2026-02-07 14:39:41 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:39:41 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:39:41 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 174.638ms
+2026-02-07 14:39:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:39:42 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 151.4153ms
+2026-02-07 14:39:44 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:39:44 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 62.434ms
+2026-02-07 14:39:44 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:39:44 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:39:44 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:39:44 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:39:46 [Information] Executed DbCommand ("56"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Name], [c].[LogoUrl], [c].[CommodityId], CAST(0 AS bit), [c0].[Id], [c0].[Name], [c0].[Code]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:39:46 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1215.1884ms.
+2026-02-07 14:39:46 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Carrier, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:39:46 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1408.7244ms
+2026-02-07 14:39:46 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:39:46 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1471.4945ms
+2026-02-07 14:39:49 [Information] Application is shutting down...
+2026-02-07 14:40:02 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:40:02 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:40:02 [Information] Hosting environment: "Development"
+2026-02-07 14:40:02 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:40:02 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:40:02 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 134.5638ms
+2026-02-07 14:40:02 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:40:02 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 152.5598ms
+2026-02-07 14:40:04 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:40:05 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 49.3915ms
+2026-02-07 14:40:05 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:40:05 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:40:05 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:40:05 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:40:06 [Information] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Name], [c].[LogoUrl], CAST(0 AS bit), [c0].[Id], [c0].[Name], [c0].[Code]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:40:06 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1207.1027ms.
+2026-02-07 14:40:06 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Models.Carrier, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:40:06 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1370.2932ms
+2026-02-07 14:40:06 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:40:06 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1423.6956ms
+2026-02-07 14:40:21 [Information] Application is shutting down...
+2026-02-07 14:44:55 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:44:55 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:44:55 [Information] Hosting environment: "Development"
+2026-02-07 14:44:55 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:44:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:44:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 172.1834ms
+2026-02-07 14:44:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:44:56 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 131.3247ms
+2026-02-07 14:44:57 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:44:57 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 64.7492ms
+2026-02-07 14:44:57 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:44:57 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:44:57 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:44:57 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:44:59 [Information] Executed DbCommand ("41"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Name], [c].[LogoUrl], CAST(0 AS bit), [c0].[Id], [c0].[Name], [c0].[Code]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:44:59 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1348.3601ms.
+2026-02-07 14:44:59 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Dtos.Carrier.GetCarriersResponseDto, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:44:59 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1522.7826ms
+2026-02-07 14:44:59 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:44:59 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1575.4546ms
+2026-02-07 14:45:05 [Information] Application is shutting down...
+2026-02-07 14:45:31 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:45:31 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:45:31 [Information] Hosting environment: "Development"
+2026-02-07 14:45:31 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:45:31 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:45:31 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 182.3474ms
+2026-02-07 14:45:31 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:45:32 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 91.145ms
+2026-02-07 14:45:36 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:45:36 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 94.9391ms
+2026-02-07 14:45:36 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:45:36 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:45:36 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:45:36 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:45:37 [Information] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Name], [c].[LogoUrl], CAST(0 AS bit), [c0].[Id], [c0].[Name], [c0].[Code]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:45:37 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1205.9721ms.
+2026-02-07 14:45:37 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Dtos.Carrier.GetCarriersResponseDto, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:45:37 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1362.3146ms
+2026-02-07 14:45:37 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:45:37 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1404.3612ms
+2026-02-07 14:46:46 [Information] Application is shutting down...
+2026-02-07 14:47:46 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:47:46 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:47:46 [Information] Hosting environment: "Development"
+2026-02-07 14:47:46 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:47:46 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:47:47 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 168.9498ms
+2026-02-07 14:47:47 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:47:47 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 129.9231ms
+2026-02-07 14:47:50 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:47:50 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 68.9945ms
+2026-02-07 14:47:50 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:47:50 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:47:50 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:47:50 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:47:51 [Information] Executed DbCommand ("57"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Name], [c].[LogoUrl], CAST(0 AS bit), [c0].[Id], [c0].[Name], [c0].[Code]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:47:51 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1332.1842ms.
+2026-02-07 14:47:51 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Dtos.Carrier.GetCarriersResponseDto, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:47:51 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1482.5841ms
+2026-02-07 14:47:51 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:47:51 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1524.5359ms
+2026-02-07 14:48:05 [Information] Application is shutting down...
+2026-02-07 14:48:32 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-07 14:48:32 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-07 14:48:32 [Information] Hosting environment: "Development"
+2026-02-07 14:48:32 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-07 14:48:32 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-07 14:48:32 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 183.9734ms
+2026-02-07 14:48:32 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-07 14:48:32 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 125.5758ms
+2026-02-07 14:48:35 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - null null
+2026-02-07 14:48:35 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:55011""""/api/Carrier""" - 307 null null 66.0231ms
+2026-02-07 14:48:35 [Information] Request starting "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - null null
+2026-02-07 14:48:35 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:48:35 [Information] Route matched with "{action = \"GetCarriers\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCarriers()" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-07 14:48:35 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" - Validation state: Valid
+2026-02-07 14:48:36 [Information] Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Name], [c].[LogoUrl], CAST(0 AS bit), [c0].[Id], [c0].[Name], [c0].[Code], [c].[CreatedAt], [c].[UpdatedAt]
+FROM [Carriers] AS [c]
+INNER JOIN [Commodities] AS [c0] ON [c].[CommodityId] = [c0].[Id]"
+2026-02-07 14:48:36 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1124.0019ms.
+2026-02-07 14:48:36 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Collections.Generic.List`1[[WorldwideFreight.Dtos.Carrier.GetCarriersResponseDto, WorldwideFreight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-07 14:48:36 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)" in 1302.6743ms
+2026-02-07 14:48:36 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.GetCarriers (WorldwideFreight)"'
+2026-02-07 14:48:36 [Information] Request finished "HTTP/1.1" "GET" "https"://"localhost:44358""""/api/Carrier""" - 200 null "application/json; charset=utf-8" 1337.9256ms
+2026-02-07 14:48:41 [Information] Application is shutting down...
