@@ -177,4 +177,65 @@ public class CarrierController : BaseController
             });
         }
     }
+
+    [HttpPut("{id}")]
+    [Authorize()]
+    public async Task<ActionResult<ApiResponseDto<UpdateCarrierResponseDto>>> UpdateCarrier(int id, [FromBody] UpdateCarrierRequestDto updateRequest)
+    {
+        try
+        {
+            if (updateRequest == null || string.IsNullOrEmpty(updateRequest.Name) ||
+                string.IsNullOrEmpty(updateRequest.LogoUrl) || updateRequest.CommodityId <= 0)
+            {
+                return BadRequest(new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "Invalid carrier data."
+                });
+            }
+            
+            var carrier = await _dbContext.Carriers.FindAsync(id);
+            if (carrier == null)
+            {
+                return NotFound(new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "Carrier not found."
+                });
+            }
+
+            carrier.Name = updateRequest.Name;
+            carrier.LogoUrl = updateRequest.LogoUrl;
+            carrier.CommodityId = updateRequest.CommodityId;
+
+            _dbContext.Carriers.Update(carrier);
+            await _dbContext.SaveChangesAsync();
+            
+            var sendData = new UpdateCarrierResponseDto
+            {
+                Id = carrier.Id,
+                Name = carrier.Name,
+                LogoUrl = carrier.LogoUrl,
+                CommodityId = carrier.CommodityId
+            };
+
+            return Ok(new ApiResponseDto<object>
+            {
+                Success = true,
+                Message = "Carrier updated successfully.",
+                Data = sendData
+            });
+            
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            _logger.LogError(ex, "Error updating carrier.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
+        }
+    }
 }
