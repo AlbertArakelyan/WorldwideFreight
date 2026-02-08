@@ -1,0 +1,43 @@
+2026-02-08 20:17:50 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-08 20:17:51 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-08 20:17:51 [Information] Hosting environment: "Development"
+2026-02-08 20:17:51 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-08 20:17:51 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-08 20:17:51 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 472.3086ms
+2026-02-08 20:17:51 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-08 20:17:52 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 369.0241ms
+2026-02-08 20:18:04 [Information] Application is shutting down...
+2026-02-08 20:18:16 [Information] User profile is available. Using '"C:\Users\alber\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-08 20:18:16 [Information] Application started. Press Ctrl+C to shut down.
+2026-02-08 20:18:16 [Information] Hosting environment: "Development"
+2026-02-08 20:18:16 [Information] Content root path: "C:\Users\alber\Desktop\csharp-learning\WorldwideFreight\WorldwideFreight"
+2026-02-08 20:18:16 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - null null
+2026-02-08 20:18:17 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 398.2095ms
+2026-02-08 20:18:17 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - null null
+2026-02-08 20:18:17 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44358""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 397.0301ms
+2026-02-08 20:20:09 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier/bulk""" - "multipart/form-data; boundary=--------------------------038747501913839823725388" 458
+2026-02-08 20:20:09 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:55011""""/api/Carrier/bulk""" - 307 null null 138.9278ms
+2026-02-08 20:20:09 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier/bulk""" - "multipart/form-data; boundary=--------------------------473481244326810181851276" 458
+2026-02-08 20:20:09 [Information] Executing endpoint '"WorldwideFreight.Controllers.CarrierController.BulkUploadCarriersFromCsv (WorldwideFreight)"'
+2026-02-08 20:20:10 [Information] Route matched with "{action = \"BulkUploadCarriersFromCsv\", controller = \"Carrier\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[System.Object]]] BulkUploadCarriersFromCsv(Microsoft.AspNetCore.Http.IFormFile)" on controller "WorldwideFreight.Controllers.CarrierController" ("WorldwideFreight").
+2026-02-08 20:20:10 [Information] Executing action method "WorldwideFreight.Controllers.CarrierController.BulkUploadCarriersFromCsv (WorldwideFreight)" - Validation state: Valid
+2026-02-08 20:20:13 [Information] Executed DbCommand ("115"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Code], [c].[CreatedAt], [c].[Name], [c].[UpdatedAt]
+FROM [Commodities] AS [c]
+WHERE [c].[Id] = @__p_0"
+2026-02-08 20:20:13 [Information] Executed DbCommand ("22"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Carriers] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([CommodityId], [CreatedAt], [LogoUrl], [Name], [UpdatedAt], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CommodityId], [CreatedAt], [LogoUrl], [Name], [UpdatedAt])
+VALUES (i.[CommodityId], i.[CreatedAt], i.[LogoUrl], i.[Name], i.[UpdatedAt])
+OUTPUT INSERTED.[Id], i._Position;"
+2026-02-08 20:20:13 [Information] Executed action method "WorldwideFreight.Controllers.CarrierController.BulkUploadCarriersFromCsv (WorldwideFreight)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3530.9928ms.
+2026-02-08 20:20:13 [Information] Executing "OkObjectResult", writing value of type '"WorldwideFreight.Dtos.ApiDtos.ApiResponseDto`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2026-02-08 20:20:13 [Information] Executed action "WorldwideFreight.Controllers.CarrierController.BulkUploadCarriersFromCsv (WorldwideFreight)" in 3936.6985ms
+2026-02-08 20:20:13 [Information] Executed endpoint '"WorldwideFreight.Controllers.CarrierController.BulkUploadCarriersFromCsv (WorldwideFreight)"'
+2026-02-08 20:20:14 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:44358""""/api/Carrier/bulk""" - 200 null "application/json; charset=utf-8" 4034.5523ms
+2026-02-08 20:21:21 [Information] Application is shutting down...

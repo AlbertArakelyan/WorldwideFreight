@@ -77,6 +77,84 @@ public class CarrierController : BaseController
             }));
         }
     }
+    
+    [HttpPost("bulk")]
+    [Authorize()]
+    public async Task<ActionResult<ApiResponseDto<object>>> BulkUploadCarriersFromCsv(IFormFile file)
+    {
+        try
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest(new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "No file uploaded."
+                });
+            }
+
+            using var stream = new StreamReader(file.OpenReadStream());
+            var carriersToAdd = new List<Carrier>();
+
+            while (!stream.EndOfStream)
+            {
+                var line = await stream.ReadLineAsync();
+                var values = line.Split(',');
+
+                if (
+                    values.Length != 3 ||
+                    string.IsNullOrEmpty(values[0]) ||
+                    string.IsNullOrEmpty(values[1]) ||
+                    !int.TryParse(values[2], out int commodityId)
+                )
+                {
+                    continue; // Skip invalid lines
+                }
+                
+                var commodity = await _dbContext.Commodities.FindAsync(commodityId);
+                
+                if (commodity == null)
+                {
+                    continue; // Skip if commodity does not exist
+                }
+
+                carriersToAdd.Add(new Carrier
+                {
+                    Name = values[0],
+                    LogoUrl = values[1],
+                    CommodityId = commodityId
+                });
+            }
+
+            if (carriersToAdd.Count == 0)
+            {
+                return BadRequest(new ApiResponseDto<object>
+                {
+                    Success = false,
+                    Message = "No valid carrier data found in the file."
+                });
+            }
+
+            _dbContext.Carriers.AddRange(carriersToAdd);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(new ApiResponseDto<object>
+            {
+                Success = true,
+                Message = $"{carriersToAdd.Count} carriers uploaded successfully."
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            _logger.LogError(ex, "Error uploading carriers from CSV.");
+            return StatusCode(500, new ApiResponseDto<object>
+            {
+                Success = false,
+                Message = "An error occurred while processing your request."
+            });
+        }
+    }
 
     [HttpGet]
     [Authorize()]
