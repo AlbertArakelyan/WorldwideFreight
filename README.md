@@ -50,7 +50,7 @@ _* You can open Swagger documentation at `http://localhost:xxxx/swagger/index.ht
 
 ![Database Structure](./db-structure.svg)
 
-## 📚 What you will learn?
+## 📚 What you will learn
 - How to create a simple ASP.NET Core Web API.
 - How to use Entity Framework Core for database operations.
 - How to implement basic CRUD operations in a Web API.
